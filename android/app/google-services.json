@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "250364316517",
+    "project_id": "vercel-practice-demo",
+    "storage_bucket": "vercel-practice-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250364316517:android:7a3079b595b22c99462f8c",
+        "android_client_info": {
+          "package_name": "com.contribution"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250364316517-t02v4c9opkvrbvobedi07hem939v0fkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzCwXhXHxwwsQI55G2SMshEhDL9x-ZNaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250364316517-t02v4c9opkvrbvobedi07hem939v0fkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
