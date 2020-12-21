@@ -19,6 +19,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* contributionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* contributionTests.m */; };
 		6F56E78736335ECAC3E45B6C /* libPods-contribution.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CA7374B46234291947EF0E /* libPods-contribution.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		860624E32590BB79007567FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 860624E22590BB79007567FF /* GoogleService-Info.plist */; };
 		98B66714AC8CB27E1B8CBA43 /* libPods-contribution-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E264EAD9CD459222B0B8CE /* libPods-contribution-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		5CA39B3BBB0EE96734BDFE02 /* Pods-contribution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contribution.release.xcconfig"; path = "Target Support Files/Pods-contribution/Pods-contribution.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = contribution/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		836367E254016AAB8978B87D /* libPods-contribution-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-contribution-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		860624E22590BB79007567FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5F6A89493F6AF85B251F0F3 /* Pods-contribution-contributionTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contribution-contributionTests.release.xcconfig"; path = "Target Support Files/Pods-contribution-contributionTests/Pods-contribution-contributionTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9C183886FADE6DE14EB0BE8 /* Pods-contribution-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contribution-tvOS.release.xcconfig"; path = "Target Support Files/Pods-contribution-tvOS/Pods-contribution-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		C891BA21AD882223529C2019 /* Pods-contribution-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-contribution-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-contribution-tvOSTests/Pods-contribution-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		13B07FAE1A68108700A75B9A /* contribution */ = {
 			isa = PBXGroup;
 			children = (
+				860624E22590BB79007567FF /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -194,7 +197,6 @@
 				DA55DB9A43BDE2EF4C6718FE /* Pods-contribution-tvOSTests.debug.xcconfig */,
 				C891BA21AD882223529C2019 /* Pods-contribution-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -343,6 +345,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				860624E32590BB79007567FF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,10 +478,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-contribution-contributionTests/Pods-contribution-contributionTests-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,10 +498,12 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-contribution/Pods-contribution-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
