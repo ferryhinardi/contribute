@@ -4,6 +4,7 @@ import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 
 function useAuth() {
   const [initializing, setInitializing] = useState(true);
+  const [confirm, setConfirm] = useState<FirebaseAuthTypes.ConfirmationResult>();
   const [user, setUser] = useState<FirebaseAuthTypes.User>();
 
   function onAuthStateChanged(user: any) {
@@ -46,6 +47,17 @@ function useAuth() {
       }
     }
   };
+  async function signInWithPhoneNumber(phoneNumber: string) {
+    const confirmation = await auth().signInWithPhoneNumber(phoneNumber);
+    setConfirm(confirmation);
+  }
+  async function confirmCode(code: string) {
+    try {
+      await confirm?.confirm(code);
+    } catch (error) {
+      console.log('Invalid code.');
+    }
+  }
   const signOut = async () => {
     const res = await auth().signOut();
     return res;
@@ -55,6 +67,8 @@ function useAuth() {
     initializing,
     user,
     signInWithGoogle,
+    signInWithPhoneNumber,
+    confirmCode,
     signOut,
   };
 }
