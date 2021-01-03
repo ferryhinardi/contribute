@@ -1,14 +1,20 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import { Button, Text } from 'react-native-elements';
 import { GoogleSigninButton } from '@react-native-community/google-signin';
+import HomeContent from './HomeContent';
 import useAuth from '../hooks/useAuth';
 import { HomeScreenNavigationProp } from '../../types';
+
+const styles = StyleSheet.create({
+  sideOffset: { marginVertical: 8 },
+});
 
 function HomeScreen({ navigation }: { navigation: HomeScreenNavigationProp }) {
   const { user, signInWithGoogle, signOut } = useAuth();
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      {user ? <Text>{`Welcome, ${user?.displayName}`}</Text> : <Text>Home Screen</Text>}
+    <SafeAreaView style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      {user ? <Text style={styles.sideOffset}>{`Welcome, `}<Text h4 h4Style={{ fontSize: 16 }}>{user?.displayName}</Text></Text> : null}
       {!user ? (
         <>
           <GoogleSigninButton
@@ -20,17 +26,15 @@ function HomeScreen({ navigation }: { navigation: HomeScreenNavigationProp }) {
         </>
       ): (
         <>
-          <Button
-            title="Go to Details"
-            onPress={() => navigation.navigate('Details')}
-          />
+          <HomeContent />
           <Button
             title="Sign out"
             onPress={signOut}
+            style={styles.sideOffset}
           />
         </>
       )}
-    </View>
+    </SafeAreaView>
   );
 }
 
